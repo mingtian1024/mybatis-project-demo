@@ -6,6 +6,6 @@ spring:
     password:
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.sky.entity
+  type-aliases-package: com.sky.common.entity
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

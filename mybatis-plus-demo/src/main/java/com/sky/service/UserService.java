@@ -1,8 +1,7 @@
 package com.sky.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.sky.entity.User;
+import com.sky.common.entity.User;
 import com.sky.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

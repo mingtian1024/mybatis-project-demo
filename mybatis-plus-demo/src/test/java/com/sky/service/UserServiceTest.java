@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.sky.entity.User;
+import com.sky.common.entity.User;
 import com.sky.mapper.UserMapper;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +23,13 @@ class UserServiceTest {
 
   @Autowired
   UserMapper userMapper;
+
+
+  @Test
+  void queryByName() {
+    User user = userMapper.queryByName("tom");
+    System.out.println(user);
+  }
 
   @Test
   void getUserById() {

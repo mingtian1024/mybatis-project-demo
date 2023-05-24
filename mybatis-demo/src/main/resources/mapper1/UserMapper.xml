@@ -4,7 +4,7 @@
 
   <resultMap id="user_map" type="com.sky.common.entity.User">
 <id column="id" property="id"/>
-    <result column="name" property="userName"/>
+    <result column="user_name" property="userName"/>
     <result column="age" property="age"/>
     <result column="email" property="email"/>
 
@@ -12,7 +12,7 @@
 
 
   <select id="queryByUserName" resultType="com.sky.common.entity.User">
-    select * from user where user_name = #{userName}
+    select id,user_name as userName ,age,email from user where user_name = #{1}
   </select>
 
   <select id="queryByUserAge" resultType="User">
