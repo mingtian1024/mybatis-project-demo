@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.UserMapper">
+
+  <resultMap id="user_map" type="com.sky.common.entity.User">
+<id column="id" property="id"/>
+    <result column="name" property="userName"/>
+    <result column="age" property="age"/>
+    <result column="email" property="email"/>
+
+  </resultMap>
+
+
+  <select id="queryByUserName" resultType="com.sky.common.entity.User">
+    select * from user where user_name = #{userName}
+  </select>
+
+  <select id="queryByUserAge" resultType="User">
+    select * from user where age = #{age}
+  </select>
+
+</mapper>

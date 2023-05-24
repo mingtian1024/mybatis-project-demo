@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/abac_demo
+    username: root
+    password:
+mybatis:
+  mapper-locations: classpath:mapper1/*.xml
+  type-aliases-package: com.sky.common.entity
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
